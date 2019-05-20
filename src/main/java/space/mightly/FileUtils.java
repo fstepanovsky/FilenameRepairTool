@@ -23,16 +23,12 @@ class FileUtils {
         }
     }
 
-    List<File> getList() {
-        return list;
-    }
-
-    void renameFiles(List<File> fileList, HashMap<String, String> dict) {
+    void renameFiles(HashMap<String, String> dict) {
         if (list.isEmpty()) {
             logger.severe("No files to rename!");
             return;
         }
-        for (var file : fileList) {
+        for (var file : list) {
             String name = file.getName();
             StringBuilder newName = new StringBuilder();
             // Reconstruct new version of string

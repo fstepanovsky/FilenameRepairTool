@@ -16,8 +16,8 @@ public class Main {
         var au = new AlphabetMappingUtil();
         au.loadDictionary(new File(args[1]));
         fu.listFiles(path);
-        //fu.renameFiles(fu.getList(), au.getDictionary());
-        fu.dryRun();
+        fu.renameFiles(au.getDictionary());
+        //fu.dryRun();
     }
 
 }
